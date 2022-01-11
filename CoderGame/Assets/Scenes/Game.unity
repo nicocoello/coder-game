@@ -561,13 +561,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2068689695627790364, guid: e560998f8ac7f254183547ef187ffaef, type: 3}
+      propertyPath: m_Name
+      value: Body
+      objectReference: {fileID: 0}
     - target: {fileID: 2344739432345964249, guid: e560998f8ac7f254183547ef187ffaef, type: 3}
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 5128ef043e72247439a5406182766c6a, type: 2}
+    - target: {fileID: 7419863869425693234, guid: e560998f8ac7f254183547ef187ffaef, type: 3}
+      propertyPath: m_Name
+      value: Hips
+      objectReference: {fileID: 0}
     - target: {fileID: 8205740759498931309, guid: e560998f8ac7f254183547ef187ffaef, type: 3}
       propertyPath: speed
-      value: 1
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8205740759498931309, guid: e560998f8ac7f254183547ef187ffaef, type: 3}
+      propertyPath: tpRate
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8532664071049761955, guid: e560998f8ac7f254183547ef187ffaef, type: 3}
       propertyPath: m_RootOrder

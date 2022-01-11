@@ -18,11 +18,15 @@ public class CharacterController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            _character.Jump();
+            _character.Jump();            
         }
         if(Input.GetKeyDown(KeyCode.Mouse0))
         {
             _character.Shoot();
+        }        
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            _character.Teleport();            
         }
     }
 }
