@@ -31,7 +31,7 @@ BlendTree:
   m_Name: Blend Tree
   m_Childs:
   - serializedVersion: 2
-    m_Motion: {fileID: 7400000, guid: efea59df0e98f77409c0c8eab0919a28, type: 2}
+    m_Motion: {fileID: 7400000, guid: b97a11793f95a014895fda2e0673f98a, type: 2}
     m_Threshold: 0
     m_Position: {x: 0, y: 0}
     m_TimeScale: 1
@@ -39,7 +39,7 @@ BlendTree:
     m_DirectBlendParameter: Blend
     m_Mirror: 0
   - serializedVersion: 2
-    m_Motion: {fileID: 7400000, guid: b9bde827bf7b2124081eaef721f4f59a, type: 2}
+    m_Motion: {fileID: 7400000, guid: c93931b0afe4ff748a025031c1cb0d82, type: 2}
     m_Threshold: 0.13333334
     m_Position: {x: 0, y: 1}
     m_TimeScale: 1
@@ -47,7 +47,7 @@ BlendTree:
     m_DirectBlendParameter: Blend
     m_Mirror: 0
   - serializedVersion: 2
-    m_Motion: {fileID: 7400000, guid: b9bde827bf7b2124081eaef721f4f59a, type: 2}
+    m_Motion: {fileID: 7400000, guid: c93931b0afe4ff748a025031c1cb0d82, type: 2}
     m_Threshold: 0.26666668
     m_Position: {x: 0, y: -1}
     m_TimeScale: -1
@@ -55,7 +55,7 @@ BlendTree:
     m_DirectBlendParameter: Blend
     m_Mirror: 0
   - serializedVersion: 2
-    m_Motion: {fileID: 7400000, guid: 0e5ed20724f4d584fb467d21d85f261c, type: 2}
+    m_Motion: {fileID: 7400000, guid: a41fbc351bd76f84b93e6e94162b018c, type: 2}
     m_Threshold: 0.40000004
     m_Position: {x: 1, y: 0}
     m_TimeScale: 1
@@ -63,7 +63,7 @@ BlendTree:
     m_DirectBlendParameter: Blend
     m_Mirror: 1
   - serializedVersion: 2
-    m_Motion: {fileID: 7400000, guid: 0e5ed20724f4d584fb467d21d85f261c, type: 2}
+    m_Motion: {fileID: 7400000, guid: a41fbc351bd76f84b93e6e94162b018c, type: 2}
     m_Threshold: 0.53333336
     m_Position: {x: -1, y: 0}
     m_TimeScale: 1
@@ -91,19 +91,19 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: VelX
     m_Type: 1
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: VelY
     m_Type: 1
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
