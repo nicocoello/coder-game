@@ -155,8 +155,8 @@ MonoBehaviour:
   speed: 5
   jumpForce: 5
   bullet: {fileID: 6807882746349499748, guid: 1610e29b9de62be48b4e28968f1546ba, type: 3}
-  _bulletRb: {fileID: 1713885294481072808, guid: 1610e29b9de62be48b4e28968f1546ba, type: 3}
   firePoint: {fileID: 1191135783}
+  fireRate: 1
 --- !u!4 &37180907 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7273382181550350042, guid: e560998f8ac7f254183547ef187ffaef, type: 3}

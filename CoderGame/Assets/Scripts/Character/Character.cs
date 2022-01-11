@@ -8,11 +8,18 @@ public class Character : MonoBehaviour
     public float jumpForce;    
     public GameObject bullet;
     public Transform firePoint;
+    public float fireRate;
+    float _nextFire;
     Rigidbody _rb;
     void Awake()
     {
-        _rb = GetComponent<Rigidbody>();
+        _rb = GetComponent<Rigidbody>();        
     }
+    private void Start()
+    {
+        fireRate = 1.5f;
+        _nextFire = Time.time;
+    }   
     public void Move(Vector3 dir)
     {
         dir *= speed;
@@ -27,6 +34,11 @@ public class Character : MonoBehaviour
     }
     public void Shoot()
     {
-        Instantiate(bullet, firePoint.position, firePoint.rotation);        
+        if(Time.time > _nextFire)
+        {
+            Instantiate(bullet, firePoint.position, firePoint.rotation);
+            _nextFire = Time.time + fireRate;
+        }       
     }
+   
 }
