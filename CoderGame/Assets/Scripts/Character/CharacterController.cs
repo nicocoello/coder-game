@@ -20,7 +20,8 @@ public class CharacterController : MonoBehaviour
         {
             _character.Jump();            
         }
-        if(Input.GetKeyDown(KeyCode.Mouse0))
+        //Solo para el desafio entregable, despues voy a dejar solo con el click del mouse
+        if(Input.GetKeyDown(KeyCode.Mouse0) ||Input.GetKeyDown(KeyCode.J) || Input.GetKeyDown(KeyCode.K) || Input.GetKeyDown(KeyCode.L)) 
         {
             _character.Shoot();
         }        
