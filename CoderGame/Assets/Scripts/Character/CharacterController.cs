@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class CharacterController : MonoBehaviour
-{
-
+{    
     Character _character;
     
     void Awake()
@@ -17,11 +16,10 @@ public class CharacterController : MonoBehaviour
       
 
         if (Input.GetKeyDown(KeyCode.Space))
-        {
+        {            
             _character.Jump();            
-        }
-        //Solo para el desafio entregable, despues voy a dejar solo con el click del mouse
-        if(Input.GetKeyDown(KeyCode.Mouse0) ||Input.GetKeyDown(KeyCode.J) || Input.GetKeyDown(KeyCode.K) || Input.GetKeyDown(KeyCode.L)) 
+        }        
+        if(Input.GetKeyDown(KeyCode.Mouse0))
         {
             _character.Shoot();
         }        

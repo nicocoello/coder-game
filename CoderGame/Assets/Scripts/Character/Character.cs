@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Character : MonoBehaviour
 {
+    public AudioSource jumpAudio;
+    public AudioSource shootAudio;
+    public AudioSource teleportAudio;
     public float speed;
     public float jumpForce;    
     public GameObject bullet;
@@ -21,7 +24,7 @@ public class Character : MonoBehaviour
     void Awake()
     {
         _rb = GetComponent<Rigidbody>();
-        _anim = GetComponent<Animator>();
+        _anim = GetComponent<Animator>();       
     }
     private void Start()
     {
@@ -41,7 +44,7 @@ public class Character : MonoBehaviour
         x = Input.GetAxis("Horizontal");
         y = Input.GetAxis("Vertical");
         transform.Rotate(0, x * Time.deltaTime * _rotationSpeed, 0);
-        transform.Translate(0, 0, y * Time.deltaTime * speed);
+        transform.Translate(0, 0, y * Time.deltaTime * speed);       
 
         _anim.SetFloat("VelX", x);
         _anim.SetFloat("VelY", y);
@@ -51,6 +54,7 @@ public class Character : MonoBehaviour
         if (Time.time > _nextTp)
         {
             transform.Translate(0, 0, y * Time.deltaTime * speed + 4);
+            teleportAudio.Play();
             _nextTp = Time.time + _tpRate;
         }        
     }
@@ -59,7 +63,9 @@ public class Character : MonoBehaviour
         if (Time.time > _nextJump)
         {
             _rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+            jumpAudio.Play();
             _nextJump = Time.time + _jumpRate;
+            
         }
     }
     public void Shoot()
@@ -67,6 +73,7 @@ public class Character : MonoBehaviour
         if(Time.time > _nextFire)
         {
             Instantiate(bullet, firePoint.position, firePoint.rotation);
+            shootAudio.Play();
             _nextFire = Time.time + _fireRate;
         }       
     }
