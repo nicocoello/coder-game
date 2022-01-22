@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DissapearBox : MonoBehaviour
 {
-    public float time;
+    public float time;    
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
@@ -14,6 +14,6 @@ public class DissapearBox : MonoBehaviour
     }    
     public void Destroy()
     {
-        Destroy(gameObject);
+        Destroy(gameObject);       
     }
 }

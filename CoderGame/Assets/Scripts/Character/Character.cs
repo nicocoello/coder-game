@@ -38,7 +38,7 @@ public class Character : MonoBehaviour
         _nextFire = Time.time;
         _tpRate = 10f;
         _nextTp = Time.time;
-        _jumpRate = 2f;
+        _jumpRate = 1f;
         _nextJump = Time.time;
         _runRate = 5f;
         _nextRun = Time.time;
