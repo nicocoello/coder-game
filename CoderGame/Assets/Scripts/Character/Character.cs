@@ -14,7 +14,8 @@ public class Character : MonoBehaviour
     float _originalHeight; 
     float reducedHeight;
     CapsuleCollider _col;
-    Rigidbody _rb;  
+    Rigidbody _rb;
+    GameManager _gm;
     void Awake()
     {
         _rb = GetComponent<Rigidbody>();        
