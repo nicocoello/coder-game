@@ -4,40 +4,24 @@ using UnityEngine;
 
 public class Character : MonoBehaviour
 {
-    public AudioSource jumpAudio;
-    public AudioSource shootAudio;
-    public AudioSource teleportAudio;   
+    public AudioSource jumpAudio; 
     public float speed;
-    public float jumpForce;    
-    public GameObject bullet;
-    public Transform firePoint;    
-    public float x, y;
-    public float reducedHeight;    
+    float jumpForce = 5f;      
     float _runRate;
     float _nextRun;
     float _jumpRate;
-    float _nextJump;
-    float _tpRate;
-    float _fireRate;
-    float _nextTp;
-    float _rotationSpeed = 250f;
-    float _nextFire;
-    float _originalHeight;
+    float _nextJump;   
+    float _originalHeight; 
+    float reducedHeight;
     CapsuleCollider _col;
-    Rigidbody _rb;
-    Animator _anim;
+    Rigidbody _rb;  
     void Awake()
     {
-        _rb = GetComponent<Rigidbody>();
-        _anim = GetComponent<Animator>();
+        _rb = GetComponent<Rigidbody>();        
         _col = GetComponent<CapsuleCollider>();
     }
     private void Start()
-    {
-        _fireRate = 1.5f;
-        _nextFire = Time.time;
-        _tpRate = 10f;
-        _nextTp = Time.time;
+    {       
         _jumpRate = 1f;
         _nextJump = Time.time;
         _runRate = 5f;
@@ -50,59 +34,33 @@ public class Character : MonoBehaviour
     }    
     public void Move()
     {
-        x = Input.GetAxis("Horizontal");
-        y = Input.GetAxis("Vertical");
-        transform.Rotate(0, x * Time.deltaTime * _rotationSpeed, 0);
-        transform.Translate(0, 0, y * Time.deltaTime * speed);       
-
-        _anim.SetFloat("VelX", x);
-        _anim.SetFloat("VelY", y);
-    }    
-    public void Teleport()
-    {
-        if (Time.time > _nextTp)
-        {
-            transform.Translate(0, 0, y * Time.deltaTime * speed + 4);
-            teleportAudio.Play();
-            _nextTp = Time.time + _tpRate;
-        }        
-    }
+        float x = Input.GetAxis("Horizontal");
+        float z = Input.GetAxis("Vertical");        
+        transform.Translate(x*Time.deltaTime*speed, 0, z * Time.deltaTime * speed); 
+    }        
     public void Jump()
     {
         if (Time.time > _nextJump)
         {
             _rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);            
-            jumpAudio.Play();
-            _anim.SetTrigger("Jump");
+            jumpAudio.Play();            
             _nextJump = Time.time + _jumpRate;            
         }
-    }
-    public void Shoot()
-    {
-        if(Time.time > _nextFire)
-        {
-            Instantiate(bullet, firePoint.position, firePoint.rotation);
-            shootAudio.Play();
-            _nextFire = Time.time + _fireRate;
-        }       
-    }
+    }  
     public void Run()
     {
         if (Time.time > _nextRun)
         {
             speed = 10f;
             _nextRun = Time.time + _runRate;
-        }
-        
+        }        
     }
     public void Crouch()
     {
-        _col.height = reducedHeight;
-        _anim.SetTrigger("Crouch");
+        _col.height = reducedHeight;        
     }
     public void GoUp()
     {
         _col.height = _originalHeight;
     }
-
 }

@@ -8,27 +8,15 @@ public class CharacterController : MonoBehaviour
     
     void Awake()
     {
-        _character = GetComponent<Character>();
-        
+        _character = GetComponent<Character>();        
     }
     void Update()
-    {
-      
+    {      
         //Jump
         if (Input.GetKeyDown(KeyCode.Space))
         {            
             _character.Jump();            
-        }  
-        //Shoot
-        if(Input.GetKeyDown(KeyCode.Mouse0))
-        {
-            _character.Shoot();
         }    
-        //Tp
-        if (Input.GetKeyDown(KeyCode.Mouse1))
-        {
-            _character.Teleport();            
-        }
         //Run
         if (Input.GetKeyDown(KeyCode.LeftShift))
             _character.Run();
