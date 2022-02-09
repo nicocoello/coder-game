@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class VictoryFloor : MonoBehaviour
 {
-    GameManager _gm;
+    public GameManager _gm;
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))

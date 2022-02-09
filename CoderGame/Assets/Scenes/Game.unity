@@ -2892,6 +2892,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abb59059a8d8b9c449b91c010272cba0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _gm: {fileID: 1168853030}
 --- !u!1 &1707298052 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6567298649446638016, guid: d167aa1141491214c8b33c19eb84f368, type: 3}
@@ -4362,7 +4363,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8284042356710062049, guid: 36d919341519074488800bdccdcb6c9a, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8284042356710062049, guid: 36d919341519074488800bdccdcb6c9a, type: 3}
       propertyPath: m_LocalPosition.x

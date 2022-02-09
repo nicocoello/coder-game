@@ -24,6 +24,14 @@ public class GameManager : MonoBehaviour
     public void Victory()
     {
         SceneManager.LoadScene("VictoryScene");
+        Invoke("Quit", 3);
+    }
+    public void Quit()
+    {
+        Debug.Log("Quit");
+        //Recordar que al hacer la build comentar la linea 32
+        UnityEditor.EditorApplication.isPlaying = false;
+        Application.Quit();
     }
     
     
