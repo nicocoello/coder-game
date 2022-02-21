@@ -5,6 +5,7 @@ using UnityEngine;
 public class CharacterController : MonoBehaviour
 {    
     Character _character;
+    PauseMenu _pauseMenu;
     
     void Awake()
     {
@@ -26,6 +27,6 @@ public class CharacterController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.LeftControl))        
             _character.Crouch();
             else if (Input.GetKeyUp(KeyCode.LeftControl))
-            _character.GoUp();
+            _character.GoUp();       
     }
 }

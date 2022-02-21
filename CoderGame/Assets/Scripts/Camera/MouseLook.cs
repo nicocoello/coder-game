@@ -7,11 +7,9 @@ public class MouseLook : MonoBehaviour
     [SerializeField] private Transform _player;
     private float _mouseSense = 300f;
     private float _xRotation = 0f;
-
-
     private void Start()
     {
-        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
     void Update()
     {
