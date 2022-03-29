@@ -6,7 +6,7 @@ public class Character : MonoBehaviour
 {
     public AudioSource jumpAudio; 
     public float speed;
-    float jumpForce = 5f;      
+    public float jumpForce = 5f;      
     float _runRate;
     float _nextRun;
     float _jumpRate;
