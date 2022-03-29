@@ -14,7 +14,7 @@ public class MainMenu : MonoBehaviour
     {
         Debug.Log("Quit");
         //Esto hay que comentarlo antes de hacer la build porque si no se va a romper
-        UnityEditor.EditorApplication.isPlaying = false;
+        //UnityEditor.EditorApplication.isPlaying = false;
         Application.Quit();
     }
     public void OnClick()

@@ -34,6 +34,7 @@ public class PauseMenu : MonoBehaviour
     void Pause()
     {
         pauseMenuUI.SetActive(true);
+        Cursor.visible = true;
         Time.timeScale = 0f;
         GameIsPaused = true;
     }
@@ -49,7 +50,7 @@ public class PauseMenu : MonoBehaviour
     {
         Debug.Log("Quit");
         //Esto hay que comentarlo antes de hacer la build porque si no se va a romper
-        UnityEditor.EditorApplication.isPlaying = false;
+        //UnityEditor.EditorApplication.isPlaying = false;
         Application.Quit();
     }
 }

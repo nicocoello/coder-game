@@ -30,7 +30,7 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("Quit");
         //Recordar que al hacer la build comentar la linea 32
-        UnityEditor.EditorApplication.isPlaying = false;
+        //UnityEditor.EditorApplication.isPlaying = false;
         Application.Quit();
     }
     
