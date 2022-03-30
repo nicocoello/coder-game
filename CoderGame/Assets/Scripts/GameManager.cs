@@ -23,9 +23,9 @@ public class GameManager : MonoBehaviour
     }    
     public void Victory()
     {
-        SceneManager.LoadScene("VictoryScene");
+        SceneManager.LoadScene("MainMenu");
         Invoke("Quit", 3);
-    }
+    } 
     public void Quit()
     {
         Debug.Log("Quit");

@@ -9,6 +9,7 @@ TagManager:
   - DFloor
   - DD
   - Spawn
+  - GM
   layers:
   - Default
   - TransparentFX
