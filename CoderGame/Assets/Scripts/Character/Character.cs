@@ -25,7 +25,7 @@ public class Character : MonoBehaviour
     {       
         _jumpRate = 1f;
         _nextJump = Time.time;
-        _runRate = 5f;
+        _runRate = 3f;
         _nextRun = Time.time;
         _originalHeight = _col.height;        
     }
