@@ -6,6 +6,7 @@ public class Coin : MonoBehaviour
 {
     PauseMenu canvas;
     [SerializeField] private GameObject _coin;
+    [SerializeField] private AudioSource _coinSfx;
     private void Start()
     {
         canvas = GameObject.Find("Canvas").GetComponent<PauseMenu>();
@@ -19,6 +20,7 @@ public class Coin : MonoBehaviour
     {
         if(other.CompareTag("Player"))
         {
+            _coinSfx.Play();
             canvas.coins++;
             Destroy(gameObject);
         }

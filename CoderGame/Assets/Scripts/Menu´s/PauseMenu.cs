@@ -10,6 +10,7 @@ public class PauseMenu : MonoBehaviour
     public static bool GameIsPaused = false;
     public GameObject pauseMenuUI;
     public Text CoinText;
+    public Image CoinImg;   
     public int coins = 0;
     private void Update()
     {
@@ -35,6 +36,9 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1f;
         GameIsPaused = false;
         Cursor.visible = false;
+        CoinText.enabled = true;
+        CoinImg.enabled = true;      
+
     }   
     void Pause()
     {
@@ -42,6 +46,8 @@ public class PauseMenu : MonoBehaviour
         Cursor.visible = true;
         Time.timeScale = 0f;
         GameIsPaused = true;
+        CoinText.enabled = false;
+        CoinImg.enabled = false;
     }
     public void OnClick()
     {
