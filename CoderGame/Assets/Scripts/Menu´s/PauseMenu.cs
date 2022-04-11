@@ -2,12 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PauseMenu : MonoBehaviour
 {
     [SerializeField] private AudioSource _button;
     public static bool GameIsPaused = false;
     public GameObject pauseMenuUI;
+    public Text CoinText;
+    public int coins = 0;
     private void Update()
     {
         //Pause
@@ -22,6 +25,8 @@ public class PauseMenu : MonoBehaviour
                Pause();
             }
         }
+        //Coins
+        CoinText.text = "Coins : " + coins;
     }
 
     public void Resume()
